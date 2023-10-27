@@ -1355,6 +1355,10 @@ h1,  h2,  h3,  h4,  h5,  h6{
   --tw-bg-opacity: 1;
   background-color: rgb(47 79 138 / var(--tw-bg-opacity));
 }
+
+.ih:hover{
+  background-color: rgb(243 106 141 / var(--tw-bg-opacity));
+}
 .jh{
   --tw-bg-opacity: 1;
   background-color: rgb(0 151 234 / var(--tw-bg-opacity));
