@@ -2055,6 +2055,12 @@ h1,  h2,  h3,  h4,  h5,  h6{
   transition: opacity 0.3s ease;
 }
 
+.map {
+  width: 100%;
+  height: 600px;
+  margin-bottom: 100px;
+}
+
 .logo-link:hover .hover-image {
   opacity: 1;
 }
@@ -2073,6 +2079,14 @@ h1,  h2,  h3,  h4,  h5,  h6{
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+  .nn\/5{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .map {
+    height: 300px;
   }
 }
 
