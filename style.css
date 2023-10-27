@@ -578,6 +578,17 @@ h1,  h2,  h3,  h4,  h5,  h6{
     opacity: 1;
   }
 
+  .cicon {
+    margin-left: -15%
+  }
+
+  .cicon:hover .a{
+    visibility: visible;
+    --tw-translate-y: 1.625rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    opacity: 1;
+  }
+
   .c:hover .a{
     visibility: visible;
     --tw-translate-y: 1.625rem;
@@ -1908,6 +1919,29 @@ h1,  h2,  h3,  h4,  h5,  h6{
   fill: #4E6BFF;
 }
 
+.cicon:hover .im{
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cicon:hover .jm{
+  --tw-border-opacity: 1;
+  border-color: rgb(78 107 255 / var(--tw-border-opacity));
+}
+
+.cicon:hover .km{
+  --tw-bg-opacity: 1;
+  background-color: rgb(78 107 255 / var(--tw-bg-opacity));
+}
+
+.cicon:hover .lm{
+  fill: #FFFFFF;
+}
+
+.cicon:hover .mm{
+  fill: #4E6BFF;
+}
+
 .c:hover .im{
   --tw-translate-y: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2087,6 +2121,9 @@ h1,  h2,  h3,  h4,  h5,  h6{
   }
   .map {
     height: 300px;
+  }
+  .cicon {
+    margin-left: -22%
   }
 }
 
