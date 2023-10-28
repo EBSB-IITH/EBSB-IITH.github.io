@@ -1,0 +1,132 @@
+html{
+    line-height: 1.5; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -moz-tab-size: 4; /* 3 */
+    -o-tab-size: 4;
+    tab-size: 4; 
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.ebsbpic{
+    height:42vh;
+}
+.AboutUs h1{ 
+    text-align: center;
+    text-transform: uppercase;
+    font-size:2.4em;
+    margin-bottom:4vh;
+}
+
+.AboutUs p{
+    opacity:1;
+    color:#9ca3af;
+    font-weight: inherit;  
+    font-size: 1.4em; 
+
+}
+.AboutUs .Firstpara{
+    width:70vw;
+    margin-left:15vw;
+}
+
+
+.AboutUs li{
+    color:#9ca3af;
+    font-weight: inherit; 
+    font-size: 1.4em; 
+    width:75vw;
+}
+.AboutUs li b{
+    --tw-text-opacity: 1;
+    color: rgb(78 107 255 / var(--tw-text-opacity));
+}
+.ib{
+    margin-bottom: 4rem;
+}
+
+.ob{    
+    margin-top: 1.875rem;
+}
+
+.bb{
+    margin-left: auto;
+    margin-right: auto;
+    width:10vw;
+}
+.AboutUs .second{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap; 
+    height:74vh;
+    max-width:100vw;
+    justify-content: center;
+
+}
+.AboutUs .image{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width:40vw;
+    height: 70vh;
+  
+}
+.AboutUs .interact{
+    max-width:60vw;
+}
+.AboutUs .Shape{
+
+    margin-bottom:15px;
+    margin-left:30px;
+    height:90px;
+    
+}
+.AboutUs .a,.AboutUs .b,.AboutUs  .c{
+    border-radius: 15px;
+    /* display:inline-block; */
+}
+.AboutUs .b{
+    height: 32vh;
+    width:18vw;
+}
+
+.AboutUs  .c{
+    height: 32vh;
+    width:18vw;
+    /* margin-right:20; */
+    /* margin-top:350px; */
+}
+.AboutUs .a{
+    height: 40vh;
+    width:20vw;
+    /* display:inline-block; */
+}
+
+.AboutUs .objec{
+    display:inline-block;
+    margin-left:30px;
+    /* width:600px; */
+}
+.xc{
+    display: none;
+}
+
+.gn{
+    display: flex;
+}
+.gg{
+    gap: 2rem;
+  }
+@media ((max-width:1100px)) or (max-height:650px) {
+   .AboutUs .image{
+    display:none;
+   }
+   .AboutUs .second{
+    height:auto;
+   }
+   .AboutUs .interact{
+    max-width:100vw;
+    
+   }
+
+}
