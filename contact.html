@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact Us</title>
+        <link rel="icon" href="favicon.ico"><link href="style.css" rel="stylesheet">
+    </head>
+    <body
+        x-data="{ page: 'team', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+        x-init="
+            darkMode = JSON.parse(localStorage.getItem('darkMode'));
+            $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
+        :class="{'b eh': darkMode === true}"
+    >
+        <header
+        class="g s r vd ya cj"
+        :class="{ 'hh sm _k dj bl ll' : stickyMenu }"
+        @scroll.window="stickyMenu = (window.pageYOffset > 20) ? true : false"
+    >
+        <div class="bb ze ki xn 2xl:ud-px-0 oo wf yf i">
+        <div class="vd to/4 tc wf yf">
+            <a href="index.html">
+                <img class="om" src="images/ebsb-logo.png" alt="Logo Light" />
+                <img class="xc nm" src="images/ebsb-logo.png" alt="Logo Dark" />
+                <img class="hover-image" src="images/wording.png" alt="Wording" />
+            </a>
+    
+            <!-- Hamburger Toggle BTN -->
+            <button class="po rc" @click="navigationOpen = !navigationOpen">
+            <span class="rc i pf re pd">
+                <span class="du-block h q vd yc">
+                <span class="rc i r s eh um tg te rd eb ml jl dl" :class="{ 'ue el': !navigationOpen }"></span>
+                <span class="rc i r s eh um tg te rd eb ml jl fl" :class="{ 'ue qr': !navigationOpen }"></span>
+                <span class="rc i r s eh um tg te rd eb ml jl gl" :class="{ 'ue hl': !navigationOpen }"></span>
+                </span>
+                <span class="du-block h q vd yc lf">
+                <span class="rc eh um tg ml jl el h na r ve yc" :class="{ 'sd dl': !navigationOpen }"></span>
+                <span class="rc eh um tg ml jl qr h s pa vd rd" :class="{ 'sd rr': !navigationOpen }"></span>
+                </span>
+            </span>
+            </button>
+            <!-- Hamburger Toggle BTN -->
+        </div>
+    
+        <div
+            class="vd wo/4 sd qo f ho oo wf yf"
+            :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }"
+        >
+            <nav>
+            <ul class="tc _o sf yo cg ep">
+                <li><a href="index.html" class="xl" :class="{ 'mk': page === 'home' }">Home</a></li>
+                <li><a href="index.html#features" class="xl">Features</a></li>
+                <li class="c i" x-data="{ dropdown: false }">
+                <a
+                    href="#"
+                    class="xl tc wf yf bg"
+                    @click.prevent="dropdown = !dropdown"
+                    :class="{ 'mk': page === 'blog-grid' || page === 'blog-single' || page === 'signin' || page === 'signup' || page === '404' }"
+                >
+                    Pages
+    
+                    <svg
+                    :class="{ 'wh': dropdown }"
+                    class="th mm we fd pf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                    </svg>
+                </a>
+    
+                <!-- Dropdown Start -->
+                <ul class="a" :class="{ 'tc': dropdown }">
+                    <li><a href="blog-grid.html" class="xl" :class="{ 'mk': page === 'blog-grid' }">Blog Grid</a></li>
+                    <li><a href="blog-single.html" class="xl" :class="{ 'mk': page === 'blog-single' }">Blog Single</a></li>
+                    <li><a href="signin.html" class="xl" :class="{ 'mk': page === 'signin' }">Sign In</a></li>
+                    <li><a href="signup.html" class="xl" :class="{ 'mk': page === 'signup' }">Sign Up</a></li>
+                    <li><a href="404.html" class="xl" :class="{ 'mk': page === '404' }">404</a></li>
+                </ul>
+                <!-- Dropdown End -->
+                </li>
+                <li><a href="index.html#support" class="xl">Support</a></li>
+            </ul>
+            </nav>
+    
+            <div class="tc wf ig pb no">
+            <div class="pc h io pa ra" :class="navigationOpen ? '!-ud-visible' : 'd'">
+                <label class="rc ab i">
+                <input type="checkbox" :value="darkMode" @change="darkMode = !darkMode" class="pf vd yc uk h r za ab" />
+                <!-- Icon Sun -->
+                <svg :class="{ 'wn' : page === 'home', 'xh' : page === 'home' && stickyMenu }" class="th om" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.0908 18.6363C10.3549 18.6363 8.69 17.9467 7.46249 16.7192C6.23497 15.4916 5.54537 13.8268 5.54537 12.0908C5.54537 10.3549 6.23497 8.69 7.46249 7.46249C8.69 6.23497 10.3549 5.54537 12.0908 5.54537C13.8268 5.54537 15.4916 6.23497 16.7192 7.46249C17.9467 8.69 18.6363 10.3549 18.6363 12.0908C18.6363 13.8268 17.9467 15.4916 16.7192 16.7192C15.4916 17.9467 13.8268 18.6363 12.0908 18.6363ZM12.0908 16.4545C13.2481 16.4545 14.358 15.9947 15.1764 15.1764C15.9947 14.358 16.4545 13.2481 16.4545 12.0908C16.4545 10.9335 15.9947 9.8236 15.1764 9.00526C14.358 8.18692 13.2481 7.72718 12.0908 7.72718C10.9335 7.72718 9.8236 8.18692 9.00526 9.00526C8.18692 9.8236 7.72718 10.9335 7.72718 12.0908C7.72718 13.2481 8.18692 14.358 9.00526 15.1764C9.8236 15.9947 10.9335 16.4545 12.0908 16.4545ZM10.9999 0.0908203H13.1817V3.36355H10.9999V0.0908203ZM10.9999 20.8181H13.1817V24.0908H10.9999V20.8181ZM2.83446 4.377L4.377 2.83446L6.69082 5.14828L5.14828 6.69082L2.83446 4.37809V4.377ZM17.4908 19.0334L19.0334 17.4908L21.3472 19.8046L19.8046 21.3472L17.4908 19.0334ZM19.8046 2.83337L21.3472 4.377L19.0334 6.69082L17.4908 5.14828L19.8046 2.83446V2.83337ZM5.14828 17.4908L6.69082 19.0334L4.377 21.3472L2.83446 19.8046L5.14828 17.4908ZM24.0908 10.9999V13.1817H20.8181V10.9999H24.0908ZM3.36355 10.9999V13.1817H0.0908203V10.9999H3.36355Z" fill=""/>
+                </svg>
+                <!-- Icon Sun -->
+                <img class="xc nm" src="images/icon-moon.svg" alt="Moon" />
+                </label>
+            </div>
+    
+            <a href="signin.html" :class="{ 'nk yl' : page === 'home', 'ok' : page === 'home' && stickyMenu }" class="ek pk xl">Sign In</a>
+            <a href="signup.html" :class="{ 'hh/[0.15]' : page === 'home', 'sh' : page === 'home' && stickyMenu }" class="lk gh dk rg tc wf xf _l gi hi">Sign Up</a>
+            </div>
+        </div>
+        </div>
+    </header>
+    <main style="margin-top: 100px">
+        <section id="support" class="i pg fh rm ji gp uq">
+            <!-- Bg Shapes -->
+            <img src="images/shape-06.svg" alt="Shape" class="h aa y" />
+            <img src="images/shape-03.svg" alt="Shape" class="h ca u" />
+            <img src="images/shape-07.svg" alt="Shape" class="h w da ee" />
+            <img src="images/shape-12.svg" alt="Shape" class="h p s" />
+            <img src="images/shape-13.svg" alt="Shape" class="h r q" />
+    
+            <!-- Section Title Start -->
+            <div
+              x-data="{ sectionTitle: `Let’s Stay Connected`, sectionTitleText: `Fill the form below to get in touch with us.`}"
+            >
+              <div class="animate_top bb ze rj ki xn vq">
+        <h2
+                x-text="sectionTitle"
+                class="fk vj pr kk wm on/5 gq/2 bb _b"
+        >
+        </h2>
+        <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
+    </div>
+    
+    
+            </div>
+            <!-- Section Title End -->
+    
+            <div class="i va bb ye ki xn wq jb mo">
+              <div class="tc uf sn tf rn un zf xl:gap-10">
+                <div class="animate_top w-full mn/5 to/3 vk sg hh sm yh rq i pg">
+                  <!-- Bg Shapes -->
+                  <img src="images/shape-03.svg" alt="Shape" class="h la x wd" />
+                  <img src="images/shape-06.svg" alt="Shape" class="h la ma ne kf" />
+    
+                  <div class="fb">
+                    <h4 class="wj kk wm cc">Email Address</h4>
+                    <p><a href="mailto:ebsbclub@campus.iith.ac.in" target="_blank">ebsbclub@campus.iith.ac.in</a></p>
+                  </div>
+                  <div class="fb">
+                    <h4 class="wj kk wm cc">Location</h4>
+                    <p>Indian Institute of Technology Hyderabad</p>
+                  </div>
+                  <div class="fb">
+                    <h4 class="wj kk wm cc">Phone Number</h4>
+                    <p>+91 91827 34726</p>
+                  </div>
+                  <div class="fb">
+                    <h4 class="wj kk wm cc">EBSB Website</h4>
+                    <p><a href="https://ekbharat.gov.in/" target="_blank">https://ekbharat.gov.in/</a></p>
+                  </div>
+    
+                  <span class="rc nd rh tm lc fb"></span>
+    
+                  <div>
+                    <h4 class="wj kk wm qb">Social Media</h4>
+                    <ul class="tc wf fg">
+                      <li>
+                        <a href="https://www.instagram.com/ebsb_club_iith/" class="cicon tc wf xf ie ld rg ml il tl" target="_blank">
+                          <svg class="th lm ml il" width="22" height="22" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" fill=""/>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.facebook.com/Ebsb-club-iith-102661981244247/" class="cicon tc wf xf ie ld rg ml il tl" target="_blank">
+                          <svg class="th lm ml il" width="22" height="22" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" fill=""/>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/ClubEbsb" class="cicon tc wf xf ie ld rg ml il tl" target="_blank">
+                          <svg class="th lm ml il" width="22" height="22" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" fill=""/>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+    
+                <div class="animate_top w-full nn/5 vo/3 vk sg hh sm yh tq">
+                  <!-- <form name="submit-to-google-sheet" action="https://script.google.com/macros/s/AKfycbwJeHnV2INuPEXpoWPVbzvDcYG_ko3I_qV0fOg3Il0-OiaaZSWWJdHtN8o43UcXz9LAag/exec" method="POST"> -->
+                    <form name="submit-to-google-sheet">
+                    <div class="tc sf yo ap zf ep qb">
+                      <div class="vd to/2">
+                        <label class="rc ac" for="fullname">Full name</label>
+                        <input
+                          type="text"
+                          name="fullname"
+                          id="fullname"
+                          placeholder="Ashok Kumar"
+                          class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
+                          required
+                          data-error="Please enter your full name"
+                        />
+                      </div>
+    
+                      <div class="vd to/2">
+                        <label class="rc ac" for="email">Email address</label>
+                        <input
+                          type="email"
+                          name="email"
+                          id="email"
+                          placeholder="ashok.kumar@gmail.com"
+                          class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
+                          required
+                          data-error="Please enter your email address"
+                        />
+                      </div>
+                    </div>
+    
+                    <div class="tc sf yo ap zf ep qb">
+                      <div class="vd to/2">
+                        <label class="rc ac" for="phone">Phone number</label>
+                        <input
+                          type="text"
+                          name="phone"
+                          id="phone"
+                          placeholder="+91 99999 99999"
+                          class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
+                          required
+                          data-error="Please enter your phone number"
+                        />
+                      </div>
+    
+                      <div class="vd to/2">
+                        <label class="rc ac" for="subject">Subject</label>
+                        <input
+                          type="text"
+                          name="subject"
+                          id="subject"
+                          placeholder="Type your subject"
+                          class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
+                          required
+                          data-error="Please enter your subject"
+                        />
+                      </div>
+                    </div>
+    
+                    <div class="fb">
+                      <label class="rc ac" for="message">Message</label>
+                      <textarea
+                        placeholder="Message"
+                        rows="4"
+                        name="message"
+                        id="message"
+                        class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 ci"
+                        required
+                        data-error="Please enter your message"
+                      ></textarea>
+                    </div>
+    
+                    <div class="tc xf">
+                      <button name="submit" class="vc rg lk gh ml il hi gi _l">Send Message</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            
+          </section>
+          <object class="map"
+            data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3803.1105891573707!2d78.12462711467383!3d17.597482687953015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbf74c33e604bf%3A0xaea55e33f7530ee!2sIITH%20Hostel%20office!5e0!3m2!1sen!2sin!4v1673621683466!5m2!1sen!2sin">
+          </object>
+            
+          <!-- ===== Contact End ===== -->
+    </main>
+
+    <script defer src="bundle.js"></script>
+    <script>
+        const scriptURL = "https://script.google.com/macros/s/AKfycbwJeHnV2INuPEXpoWPVbzvDcYG_ko3I_qV0fOg3Il0-OiaaZSWWJdHtN8o43UcXz9LAag/exec"
+        const form = document.forms['submit-to-google-sheet'];
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            }).then(res => {
+                alert("Thanks for Contacting Us. We will get back to you soon.")
+                setTimeout(function() {
+                    window.location.href = "contact.html";
+                },)
+                form.reset();
+                }, 1000) 
+                .catch(error => console.error('Error!', error.message))   
+            });
+    </script>
+    </body>
+
+</html>
+
