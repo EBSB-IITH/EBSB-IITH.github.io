@@ -2091,6 +2091,9 @@ h1,  h2,  h3,  h4,  h5,  h6{
   left: 100%;
   opacity: 0;
   transition: opacity 0.3s ease;
+  max-width: 300%;
+  margin-left: 10%;
+  margin-top: 12%;
 }
 
 .map {
@@ -2128,6 +2131,9 @@ h1,  h2,  h3,  h4,  h5,  h6{
   }
   .cicon {
     margin-left: -22%
+  }
+  .pa {
+    margin-top: 2%;
   }
 }
 

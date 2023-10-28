@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Past Events</title>
+    <title>EBSB IITH | Past Events</title>
   <link rel="icon" href="favicon.ico"><link href="style.css" rel="stylesheet"></head>
   <body
-    x-data="{ page: 'blog-grid', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
+    x-data="{ page: 'past-events', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
     x-init="
          darkMode = JSON.parse(localStorage.getItem('darkMode'));
          $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
@@ -21,9 +21,10 @@
 >
   <div class="bb ze ki xn 2xl:ud-px-0 oo wf yf i">
     <div class="vd to/4 tc wf yf">
-      <a href="index.html">
-        <img class="om" src="images/logo-light.svg" alt="Logo Light" />
-        <img class="xc nm" src="images/logo-dark.svg" alt="Logo Dark" />
+      <a href="index.html" class="logo-link">
+        <img class="om" src="images/ebsb-logo.png" alt="Logo Light" />
+        <img class="xc nm" src="images/ebsb-logo.png" alt="Logo Dark" />
+        <img class="hover-image" src="images/wording.png" alt="Wording" />
       </a>
 
       <!-- Hamburger Toggle BTN -->
@@ -50,15 +51,16 @@
       <nav>
         <ul class="tc _o sf yo cg ep">
           <li><a href="index.html" class="xl" :class="{ 'mk': page === 'home' }">Home</a></li>
-          <li><a href="index.html#features" class="xl">Features</a></li>
-          <li class="c i" x-data="{ dropdown: false }">
+          <li><a href="About.html" class="xl" :class="{ 'mk': page === 'about' }">About</a></li>
+          <!-- <li><a href="index.html#features" class="xl">Features</a></li> -->
+          <li class="c i" x-data="{ dropdown: false }" style="margin-left: 0%;">
             <a
               href="#"
               class="xl tc wf yf bg"
               @click.prevent="dropdown = !dropdown"
-              :class="{ 'mk': page === 'blog-grid' || page === 'blog-single' || page === 'signin' || page === 'signup' || page === '404' }"
+              :class="{ 'mk': page === 'past-events' || page === 'upcoming-event' }"
             >
-              Pages
+              Events
 
               <svg
               :class="{ 'wh': dropdown }"
@@ -69,15 +71,18 @@
 
             <!-- Dropdown Start -->
             <ul class="a" :class="{ 'tc': dropdown }">
-              <li><a href="blog-grid.html" class="xl" :class="{ 'mk': page === 'blog-grid' }">Blog Grid</a></li>
+              <li><a href="past-events.html" class="xl" :class="{ 'mk': page === 'past-events' }">Past Events</a></li>
+              <li><a href="upcoming-event.html" class="xl" :class="{ 'mk': page === 'upcoming-event' }">Upcoming Event</a></li>
+              <!-- <li><a href="blog-grid.html" class="xl" :class="{ 'mk': page === 'blog-grid' }">Blog Grid</a></li>
               <li><a href="blog-single.html" class="xl" :class="{ 'mk': page === 'blog-single' }">Blog Single</a></li>
               <li><a href="signin.html" class="xl" :class="{ 'mk': page === 'signin' }">Sign In</a></li>
               <li><a href="signup.html" class="xl" :class="{ 'mk': page === 'signup' }">Sign Up</a></li>
-              <li><a href="404.html" class="xl" :class="{ 'mk': page === '404' }">404</a></li>
+              <li><a href="404.html" class="xl" :class="{ 'mk': page === '404' }">404</a></li> -->
             </ul>
             <!-- Dropdown End -->
           </li>
-          <li><a href="index.html#support" class="xl">Support</a></li>
+          <li><a href="team.html" class="xl" :class="{ 'mk': page === 'team' }">Team</a></li>
+          <li><a href="contact.html" class="xl" :class="{ 'mk': page === 'contact' }">Contact Us</a></li>
         </ul>
       </nav>
 
@@ -100,9 +105,6 @@
     </div>
   </div>
 </header>
-
-    <!-- ===== Header End ===== -->
-
     <main>
       <!-- ===== Projects Start ===== -->
       <section class="pg pj vp mr oj wp nr">
