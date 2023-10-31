@@ -790,6 +790,7 @@
   .bb{
     margin-left: auto;
     margin-right: auto;
+  
   }
   .cb{
     margin-top: 2.875rem;
@@ -2732,6 +2733,7 @@
 
   .m1{
     text-align:center;
+    margin-left:20vw;
   }
   
   .m2{
@@ -2745,6 +2747,7 @@
   
   .m3{
     font-weight:bold;
+    
   }
   .m5{
     font-size:larger;
@@ -2752,16 +2755,18 @@
   }
   .m4{
     height:34vh;
-    width:30vw;
+    width:35w;
   }
   
   .objec{
     font-size: large;
     margin-left:10vw;
     margin-bottom:5vh;
-    width:74vw;
+    width:65vw;
   }
-   
+  .objec li{
+    margin-bottom:2vh;
+  }
   .ebsbpic{
     height:40vh;
   }
@@ -2769,4 +2774,22 @@
     border-radius: 1.2vh;
   }
   
-  
+  .m6{
+    margin-top:15vh;
+  }
+
+  .m7{
+    width:100vw;
+    height:70vh;
+    background-color: red;
+  }
+  .m8{
+    width:100vw;
+    height:70vh;
+    background-color: purple;
+  }
+
+  .m9{
+
+    margin-top:57vh;
+  }

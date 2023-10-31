@@ -11,7 +11,7 @@
     x-init="
          darkMode = JSON.parse(localStorage.getItem('darkMode'));
          $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
-    :class="{'b eh': darkMode === true}"
+         :class="{'b eh': darkMode === true}"
   >
     <!-- ===== Header Start ===== -->
     <header
