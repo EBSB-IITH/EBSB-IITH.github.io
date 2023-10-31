@@ -81,6 +81,34 @@
             </ul>
             <!-- Dropdown End -->
           </li>
+          <li class="c i" x-data="{ dropdown: false }" style="margin-left: 0%;">
+            <a
+              href="#"
+              class="xl tc wf yf bg"
+              @click.prevent="dropdown = !dropdown"
+              :class="{ 'mk': page === 'ys-updates' || page === 'ys-about' || page === 'ys-schedule' || page === 'ys-gallery' || page === 'ys-team' || page === 'ys-contact' || page === 'ys-other' }"
+            >
+              Yuva Sangam
+
+              <svg
+              :class="{ 'wh': dropdown }"
+              class="th mm we fd pf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+              </svg>
+            </a>
+
+            <!-- Dropdown Start -->
+            <ul class="a" :class="{ 'tc': dropdown }">
+              <li><a href="yuva-sangam/updates.html" class="xl" :class="{ 'mk': page === 'ys-updates' }">Updates</a></li>
+              <li><a href="yuva-sangam/about.html" class="xl" :class="{ 'mk': page === 'ys-about' }">About</a></li>
+              <li><a href="yuva-sangam/schedule.html" class="xl" :class="{ 'mk': page === 'ys-schedule' }">Schedule</a></li>
+              <li><a href="yuva-sangam/gallery.html" class="xl" :class="{ 'mk': page === 'ys-gallery' }">Gallery</a></li>
+              <li><a href="yuva-sangam/team.html" class="xl" :class="{ 'mk': page === 'ys-team' }">Team</a></li>
+              <li><a href="yuva-sangam/contact.html" class="xl" :class="{ 'mk': page === 'ys-contact' }">Contact</a></li>
+              <li><a href="yuva-sangam/other.html" class="xl" :class="{ 'mk': page === 'ys-other' }">Other</a></li>
+            </ul>
+            <!-- Dropdown End -->
+          </li>
           <li><a href="team.html" class="xl" :class="{ 'mk': page === 'team' }">Team</a></li>
           <li><a href="contact.html" class="xl" :class="{ 'mk': page === 'contact' }">Contact Us</a></li>
         </ul>
