@@ -2727,6 +2727,46 @@
       font-size: 40px;
       line-height: 42px;
     }
+
+  }
+
+  .m1{
+    text-align:center;
+  }
+  
+  .m2{
+    font-size:large;
+    width:60vw;
+    margin-left:20vw;
+  }
+  .uo{
+    font-size:large;
+  }
+  
+  .m3{
+    font-weight:bold;
+  }
+  .m5{
+    font-size:larger;
+    margin-bottom:2vh;
+  }
+  .m4{
+    height:34vh;
+    width:30vw;
+  }
+  
+  .objec{
+    font-size: large;
+    margin-left:10vw;
+    margin-bottom:5vh;
+    width:74vw;
+  }
+   
+  .ebsbpic{
+    height:40vh;
+  }
+  .animate_left img{
+    border-radius: 1.2vh;
   }
   
 @keyframes fadeIn {
