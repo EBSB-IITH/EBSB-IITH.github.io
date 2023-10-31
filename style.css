@@ -2108,7 +2108,14 @@
     opacity: 1;
   }
   
+  .yscon {
+    margin-left: 38%;
+  }
+
   @media (max-width: 768px){
+    .yscon {
+      margin-left: 0%;
+    }
     .coord-img {
       width: 250px;
       position: relative;
