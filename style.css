@@ -2729,4 +2729,53 @@
     }
   }
   
+@keyframes fadeIn {
+  from {top: 20%; opacity: 0;}
+  to {top: 100; opacity: 1;}
   
+}
+
+@-webkit-keyframes fadeIn {
+  from {top: 20%; opacity: 0;}
+  to {top: 100; opacity: 1;}
+  
+}
+
+.wrapper {
+  margin-top: 25%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  animation: fadeIn 1000ms ease;
+  -webkit-animation: fadeIn 1000ms ease;
+  
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    margin-top: 100%;
+  }
+}
+
+.comingsoonh1 {
+  font-size: 50px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0;
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+}
+
+.dot {
+  color: #4FEBFE;
+}
+
+.comingsoonp {
+  text-align: center;
+  margin: 18px;
+  font-family: 'Muli', sans-serif;
+  font-weight: normal;
+  
+}
