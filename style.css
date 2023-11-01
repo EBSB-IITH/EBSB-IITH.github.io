@@ -2112,6 +2112,12 @@
     margin-left: 38%;
   }
 
+  .eventsp {
+    margin-top: 2%; 
+    margin-bottom: 4%; 
+    color: black;
+  }
+
   @media (max-width: 768px){
     .yscon {
       margin-left: 0%;
