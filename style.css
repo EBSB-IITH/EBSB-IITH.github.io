@@ -1138,6 +1138,107 @@
   .cf{
     flex-shrink: 0;
   }
+.diwalisection {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: hue-rotate(70deg);
+}
+.loader {
+  position: relative;
+  transform: rotate(calc(45deg * var(--r)));
+}
+
+.loader span {
+  position: absolute;
+  top: 0;
+  left: -200px;
+  width: 300px;
+  height: 2px;
+  transform-origin: right;
+  transform: rotate(calc(18deg * var(--i)));
+}
+
+.loader span::before {
+  content: "";
+  position: absolute;
+  top: calc(-15px / 2);
+  width: 15px;
+  height: 15px;
+  background: #00ff0a;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00ff0a, 0 0 20px #00ff0a, 0 0 40px #00ff0a,
+    0 0 60px #00ff0a, 0 0 80px #00ff0a, 0 0 100px #00ff0a;
+  animation: animate-something 5s linear infinite;
+  animation-delay: calc(-0.5s * var(--i));
+}
+
+@keyframes animate-something {
+  0% {
+    transform: translateX(200px) scale(1);
+    opacity: 0;
+    filter: hue-rotate(0deg);
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0px) scale(0);
+    opacity: 1;
+    filter: hue-rotate(360deg);
+  }
+}
+
+.firecracker {
+  width: 20px;
+  height: 100px;
+  background: #ff0000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(45deg);
+  animation: moveFirecracker 2s linear infinite;
+}
+
+.spark {
+  width: 10px;
+  height: 10px;
+  background: #f6ca4a;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  animation: igniteSpark 1s ease-out infinite;
+}
+
+@keyframes moveFirecracker {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100vh;
+  }
+}
+
+@keyframes igniteSpark {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
   .df{
     --tw-translate-y: 100%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
