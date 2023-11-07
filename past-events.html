@@ -13,6 +13,9 @@
          $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
     :class="{'b eh': darkMode === true}"
   >
+  <div id="loading-screen">
+    <div class="loading-spinner"></div>
+  </div>
     <!-- ===== Header Start ===== -->
     <header
   class="g s r vd ya cj"
@@ -830,5 +833,11 @@
 </button>
 
     <!-- ====== Back To Top End ===== -->
-  <script defer src="bundle.js"></script></body>
+  <script defer src="bundle.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+  // Hide the loading screen when the page is fully loaded
+  document.getElementById('loading-screen').style.display = 'none';
+});
+</script></body>
 </html>
