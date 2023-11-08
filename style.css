@@ -3125,3 +3125,23 @@
     max-width: 35px;
   }
 }
+
+.full-page-bg {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(images/iith.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top !important;
+  background-attachment: fixed !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 1;
+}
+
+iframe {
+  width: 80%;
+  height: 300px;
+}
