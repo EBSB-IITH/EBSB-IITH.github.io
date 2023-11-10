@@ -1136,6 +1136,8 @@
   }
   .bf{
     flex-shrink: 0;
+    height:8vw;
+    width:10vw;
   }
   .cf{
     flex-shrink: 0;
@@ -2451,6 +2453,7 @@
   
     .uo{
       width: 95%;
+      margin-right:20vw;
     }
   
     .vo\/3{
@@ -2852,9 +2855,9 @@
 
   .m1{
     text-align:center;
-    margin-left:20vw;
   }
   
+
   .m2{
     font-size:large;
     width:60vw;
@@ -2999,8 +3002,14 @@
   background-color: purple;
 }
 .m9{
-  margin-top:50vh;
-  width:15vw;
+  margin-top:35vh;
+  width:25vw; 
+  height:25vh;
+}
+.home_img{
+  width: 25vw;
+  height:36vh;
+  margin-bottom:5vh;
 }
 
 #loading-screen {
@@ -3117,6 +3126,40 @@
   }
 }
 
+@media (width < 768px) {
+  
+  .m_ {
+    font-size:large;
+    width:85vw;
+    margin-left:5vw;
+    margin-right:5vw;
+
+  }
+  .m1{
+    text-align:center;
+    margin-left:0vw;
+  }
+  .m0{
+    text-align: center;
+  }
+  .mz{
+  
+    /* margin-left:50vw; */
+    text-align: center;
+    /* margin-left:10vw; */
+  }
+  .m3{
+    margin-left:0vw;
+  }
+  b{
+    margin-left:0vw;
+  }
+}
+
+/* .m_{
+  height:25vh;
+  width:25vw;
+} */
 @media screen and (max-width: 530px) {
   .cards{
     height: 300px;
