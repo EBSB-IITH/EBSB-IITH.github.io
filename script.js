@@ -104,7 +104,6 @@ function checkAndShowForm() {
         document.body.oncontextmenu = "return true";
         document.body.onkeydown = "return true";
         document.body.onmousedown = "return true";
-        setFocusOnForm();
         document.getElementById('moves').value = moves;
         form.addEventListener('submit', e => {
             e.preventDefault();
