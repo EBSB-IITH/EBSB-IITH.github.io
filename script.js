@@ -49,19 +49,18 @@ function matchCards(img1, img2) {
                 e.preventDefault();
                 fetch(scriptURL, {
                     method: 'POST',
-                    body: new FormData(form)
-                }).then(res => {
-                    alert("Thanks for playing the lucky draw. We will get back to you soon.")
+                    body: new FormData(form),
+                })
+                .then(res => res.json())
+                .then(data => {
+                    alert("Thanks for playing the lucky draw. We will get back to you soon.");
                     setTimeout(function() {
                         window.location.href = "game.html";
-                    },)
+                    }, 1000);
                     form.reset();
-                    }, 1000) 
-                    .catch(error => console.error('Error!', error.message))   
-                });
-            // setTimeout(() => {
-            //     return shuffleCard();
-            // }, 1000);
+                })
+                .catch(error => console.error('Error!', error.message));
+            });
         }
         cardOne.removeEventListener("click", flipCard);
         cardTwo.removeEventListener("click", flipCard);
