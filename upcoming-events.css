@@ -11,7 +11,7 @@ top: 6%;
 }
 
 .Game-btn {
-    border: 2px solid blue;
+    border: 2px solid #4E6BFF;
     padding: 2vh 5vw;
     border-radius: 25px;
    transition: all 0.2s ease-in;
@@ -20,7 +20,7 @@ top: 6%;
 }
 
 .Game-btn:hover {
-background-color: blue;
+background-color: #4E6BFF;
 color:white;
 
 }
