@@ -3172,7 +3172,7 @@ iframe {
   position: relative;
   padding: 16px 30px;
   font-size: 1.5rem;
-  /* width:15vw; */
+
   color: var(--color);
   border: 2px solid rgba(0, 0, 0, 0.5);
   margin-left:44vw;
@@ -3205,6 +3205,7 @@ iframe {
 }
 
 .button:hover::before {
+  
   transform: scale(1);
   transition-delay: 0.5s;
   box-shadow: 0 0 10px var(--color),
@@ -3239,7 +3240,8 @@ iframe {
 
 .button:hover span:nth-child(1),
 .button:hover span:nth-child(3) {
-  transform: translateX(0);
+   transform: translateX(0); 
+  
 }
 
 .button span:nth-child(2),
@@ -3250,7 +3252,8 @@ iframe {
 
 .button:hover span:nth-child(1),
 .button:hover span:nth-child(3) {
-  transform: translateY(0);
+   transform: translateY(0); 
+  
 }
 
 .button span:nth-child(1) {
