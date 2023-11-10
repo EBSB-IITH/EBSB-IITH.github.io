@@ -267,7 +267,7 @@
     </div>
     <h2 class="vj 2xl:ud-text-title-lg kk wm nb gb" style="text-align: center; margin-top: -13%;">Moves: <span id="moveCount">0</span></h2>
 
-    <div class="animate_top w-full nn/5 vo/3 vk sg hh sm yh tq" id="userDetailsForm" style="margin-left: auto; margin-right: auto; opacity: 0; margin-top: 4%;">
+    <div class="animate_top w-full nn/5 vo/3 vk sg hh sm yh tq" id="userDetailsForm" style="margin-left: auto; margin-right: auto; display: none; margin-top: 4%;">
       <h2 class="vj 2xl:ud-text-title-lg kk wm nb gb" style="text-align: center;">Congratulations! You matched all cards.</h2>
         <form name="submit-to-google-sheet">
         <div class="tc sf yo ap zf ep qb">
@@ -347,5 +347,12 @@
     </div>
     <script src="script.js"></script>
     <script defer src="bundle.js"></script>
+    <script>
+      if (matched === 8)
+      {
+        document.getElementById("userDetailsForm").style.display = "block";
+        document.getElementById("userDetailsForm").style.opacity = "1";
+      }
+    </script>
   </body>
 </html>

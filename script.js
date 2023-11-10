@@ -96,8 +96,39 @@ function shuffleCard() {
     });
 }
 
+function checkAndShowForm() {
+    if (matched === 8) {
+        userDetailsForm.style.display = "block";
+        userDetailsForm.style.opacity = "1";
+        disableDeck = true;
+        document.body.oncontextmenu = "return true";
+        document.body.onkeydown = "return true";
+        document.body.onmousedown = "return true";
+        setFocusOnForm();
+        document.getElementById('moves').value = moves;
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form),
+            })
+                .then(res => res.json())
+                .then(data => {
+                    alert("Thanks for playing the lucky draw. We will get back to you soon.");
+                    setTimeout(function () {
+                        window.location.href = "game.html";
+                    }, 1000);
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    }
+}
+
 shuffleCard();
     
 cards.forEach(card => {
     card.addEventListener("click", flipCard);
 });
+
+setInterval(checkAndShowForm, 100);
