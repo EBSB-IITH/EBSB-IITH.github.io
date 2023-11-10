@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EBSB IITH | Dussehra 2023</title>
     <link rel="icon" href="https://www.iiitm.ac.in/images/EBSB/LOGO-EBSB.png" class="icon"><link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="upcoming-events.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;900&display=swap" rel="stylesheet"></head>
   <body
     x-data="{ page: 'upcoming-event', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }"
@@ -133,7 +134,8 @@
     <!-- ===== Header End ===== -->
 
     <main>
-        <section style="margin-top: 7%; margin-bottom: -10%;">
+      <div class="main-container">
+          <section style="margin-top: 7%; margin-bottom: -10%;">
             <h2 class="animate_top vj 2xl:ud-text-title-lg kk wm nb gb" style="text-align: center;">Diwali</h2>
             <p class="animate_top" style="text-align: center;">The festival of lights</p>
           </section>
@@ -391,13 +393,11 @@
               <span style="--i:20;"></span>
             </div>
           </section>
-          <a class="button" href="./game.html" style="--color:#1e9bff;">
-            <!-- <span></span>
-            <span></span>
-            <span></span>
-            <span></span> -->
-            MEMORY GAME
-          </a>
+          <section class="game-btn-section">
+           <a href="game.html"><button class="Game-btn">Lucky Draw</button></a> 
+          </section>
+      </div>
+      
     </main>
     <footer>
         <div class="bb ze ki xn 2xl:ud-px-0">
