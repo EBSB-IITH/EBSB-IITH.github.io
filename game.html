@@ -16,6 +16,7 @@
          darkMode = JSON.parse(localStorage.getItem('darkMode'));
          $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
     :class="{'b eh': darkMode === true}"
+    oncontextmenu="return false" onkeydown="return false;" onmousedown="return false;"
   >
   <!-- ===== Header Start ===== -->
   <header
@@ -266,6 +267,84 @@
     </div>
     <h2 class="vj 2xl:ud-text-title-lg kk wm nb gb" style="text-align: center; margin-top: -13%;">Moves: <span id="moveCount">0</span></h2>
 
+    <div class="animate_top w-full nn/5 vo/3 vk sg hh sm yh tq" id="userDetailsForm" style="margin-left: auto; margin-right: auto; display: none; margin-top: 4%;">
+      <h2 class="vj 2xl:ud-text-title-lg kk wm nb gb" style="text-align: center;">Congratulations! You matched all cards.</h2>
+        <form name="submit-to-google-sheet">
+        <div class="tc sf yo ap zf ep qb">
+          <div class="vd to/2">
+            <label class="rc ac" for="fullname">Full Name</label>
+            <input
+              type="text"
+              name="fullname"
+              id="fullname"
+              placeholder="Ashok Kumar"
+              class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
+              required
+              data-error="Please enter your full name"
+            />
+          </div>
+
+          <div class="vd to/2">
+            <label class="rc ac" for="roll">Roll Number</label>
+            <input
+              type="text"
+              name="roll"
+              id="roll"
+              placeholder="aa20btech11001"
+              class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
+              required
+              data-error="Please enter your IITH roll number"
+            />
+          </div>
+        </div>
+
+        <div class="tc sf yo ap zf ep qb">
+          <div class="vd to/3">
+            <label class="rc ac" for="phone">Phone number</label>
+            <input
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder="+91 99999 99999"
+              class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
+              required
+              data-error="Please enter your phone number"
+            />
+          </div>
+
+          <div class="vd to/3">
+            <label class="rc ac" for="instagram">Instagram ID</label>
+            <input
+              type="text"
+              name="instagram"
+              id="instagram"
+              placeholder="Type your Instagram ID"
+              class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
+              required
+              data-error="Please enter your instagram ID"
+            />
+          </div>
+
+          <div class="vd to/3">
+            <label class="rc ac" for="moves">Moves</label>
+            <input
+              type="text"
+              name="moves"
+              id="moves"
+              placeholder="Number of moves to finish the game"
+              class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi"
+              required
+              readonly
+              data-error=""
+            />
+          </div>
+        </div>
+
+        <div class="tc xf">
+          <button name="submit" class="vc rg lk gh ml il hi gi _l">Submit</button>
+        </div>
+      </form>
+    </div>
     <script src="script.js"></script>
     <script defer src="bundle.js"></script>
   </body>

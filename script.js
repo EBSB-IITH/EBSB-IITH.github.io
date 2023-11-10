@@ -1,10 +1,20 @@
 const cards = document.querySelectorAll(".card");
 const moveCountElement = document.getElementById("moveCount");
+const userDetailsForm = document.getElementById("userDetailsForm");
+const form = document.forms['submit-to-google-sheet'];
+const scriptURL = "https://script.google.com/macros/s/AKfycbwruRAe5isQcdGkLL9HcIxKSaoJqM_XzZGNWpZQnAbfslgkPKHmu-tOYOjkgMDMSjT1/exec";
 
 let matched = 0;
 let cardOne, cardTwo;
 let disableDeck = false;
 let moves = 0;
+
+function setFocusOnForm() {
+    const firstInput = document.getElementById("fullname"); 
+    if (firstInput) {
+      firstInput.focus();
+    }
+  }
 
 function flipCard({target: clickedCard}) {
     if(cardOne !== clickedCard && !disableDeck) {
@@ -16,9 +26,10 @@ function flipCard({target: clickedCard}) {
         disableDeck = true;
         let cardOneImg = cardOne.querySelector(".back-view img").src,
         cardTwoImg = cardTwo.querySelector(".back-view img").src;
-        matchCards(cardOneImg, cardTwoImg);
+        // matchCards(cardOneImg, cardTwoImg);
         moves++;
         moveCountElement.innerText = moves;
+        matchCards(cardOneImg, cardTwoImg);
     }
 }
 
@@ -26,9 +37,31 @@ function matchCards(img1, img2) {
     if(img1 === img2) {
         matched++;
         if(matched == 8) {
-            setTimeout(() => {
-                return shuffleCard();
-            }, 1000);
+            userDetailsForm.style.display = "block";
+            userDetailsForm.style.opacity = "1";
+            disableDeck = true;
+            document.body.oncontextmenu = "return true";
+            document.body.onkeydown = "return true";
+            document.body.onmousedown = "return true";
+            setFocusOnForm();
+            document.getElementById('moves').value = moves;
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                }).then(res => {
+                    alert("Thanks for playing the lucky draw. We will get back to you soon.")
+                    setTimeout(function() {
+                        window.location.href = "game.html";
+                    },)
+                    form.reset();
+                    }, 1000) 
+                    .catch(error => console.error('Error!', error.message))   
+                });
+            // setTimeout(() => {
+            //     return shuffleCard();
+            // }, 1000);
         }
         cardOne.removeEventListener("click", flipCard);
         cardTwo.removeEventListener("click", flipCard);
