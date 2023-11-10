@@ -105,22 +105,6 @@ function checkAndShowForm() {
         document.body.onkeydown = "return true";
         document.body.onmousedown = "return true";
         document.getElementById('moves').value = moves;
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            fetch(scriptURL, {
-                method: 'POST',
-                body: new FormData(form),
-            })
-                .then(res => res.json())
-                .then(data => {
-                    alert("Thanks for playing the lucky draw. We will get back to you soon.");
-                    setTimeout(function () {
-                        window.location.href = "game.html";
-                    }, 1000);
-                    form.reset();
-                })
-                .catch(error => console.error('Error!', error.message));
-        });
     }
 }
 
