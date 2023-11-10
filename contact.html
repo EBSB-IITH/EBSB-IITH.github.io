@@ -53,7 +53,7 @@
           <li><a href="index.html" class="xl" :class="{ 'mk': page === 'home' }">Home</a></li>
           <li><a href="About.html" class="xl" :class="{ 'mk': page === 'about' }">About</a></li>
           <!-- <li><a href="index.html#features" class="xl">Features</a></li> -->
-          <li class="c i" x-data="{ dropdown: false }">
+          <li class="c i" x-data="{ dropdown: false }" style="margin-left: 0%;">
             <a
               href="#"
               class="xl tc wf yf bg"
@@ -73,11 +73,6 @@
             <ul class="a" :class="{ 'tc': dropdown }">
               <li><a href="past-events.html" class="xl" :class="{ 'mk': page === 'past-events' }">Past Events</a></li>
               <li><a href="upcoming-event.html" class="xl" :class="{ 'mk': page === 'upcoming-event' }">Upcoming Event</a></li>
-              <!-- <li><a href="blog-grid.html" class="xl" :class="{ 'mk': page === 'blog-grid' }">Blog Grid</a></li>
-              <li><a href="blog-single.html" class="xl" :class="{ 'mk': page === 'blog-single' }">Blog Single</a></li>
-              <li><a href="signin.html" class="xl" :class="{ 'mk': page === 'signin' }">Sign In</a></li>
-              <li><a href="signup.html" class="xl" :class="{ 'mk': page === 'signup' }">Sign Up</a></li>
-              <li><a href="404.html" class="xl" :class="{ 'mk': page === '404' }">404</a></li> -->
             </ul>
             <!-- Dropdown End -->
           </li>
@@ -126,9 +121,6 @@
             <img class="xc nm" src="images/icon-moon.svg" alt="Moon" />
           </label>
         </div>
-
-        <a href="signin.html" :class="{ 'nk yl' : page === 'home', 'ok' : page === 'home' && stickyMenu }" class="ek pk xl">Sign In</a>
-        <a href="signup.html" :class="{ 'hh/[0.15]' : page === 'home', 'sh' : page === 'home' && stickyMenu }" class="lk gh dk rg tc wf xf _l gi hi">Sign Up</a>
       </div>
     </div>
   </div>
