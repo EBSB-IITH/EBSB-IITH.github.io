@@ -88,6 +88,10 @@
     border-top-width: 1px; /* 3 */
   }
   
+  nav {
+    font-weight: bolder;
+}
+
   /*
   Add the correct text decoration in Chrome, Edge, and Safari.
   */
@@ -3007,8 +3011,8 @@
   height:25vh;
 }
 .home_img{
-  width: 25vw;
-  height:36vh;
+  width: 80%;
+  height: auto;
   margin-bottom:5vh;
 }
 
